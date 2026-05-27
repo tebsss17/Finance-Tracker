@@ -15,10 +15,12 @@ return new class extends Migration
         Schema::create('accounts', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete();
-            $table->string('name');
             $table->enum('type', ['bank', 'crypto', 'e-wallet']);
-            $table->decimal('balance', 15, 2)->default(0);
+            $table->string('provider');
+            $table->decimal('balance', 15, 2);
             $table->string('currency', 10)->default('PHP');
+            $table->boolean('is_active')->default(true)->nullable();
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

@@ -21,13 +21,13 @@
 
             <flux:sidebar.nav>
                 <flux:sidebar.group :heading="__('Finance')">
-                    <flux:sidebar.item icon="wallet" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
+                    <flux:sidebar.item icon="wallet" class="mb-2" :href="route('accounts.index')" :current="request()->routeIs('accounts.index')" wire:navigate>
                         Accounts
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="arrow-path" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
+                    <flux:sidebar.item icon="arrow-path" class="mb-2" :href="route('accounts.index')" :current="request()->routeIs('transanctions.index')" wire:navigate>
                         Transactions
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="banknotes" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
+                    <flux:sidebar.item icon="banknotes" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('budgets.index')" wire:navigate>
                         Budgets
                     </flux:sidebar.item>
                 </flux:sidebar.group>
@@ -36,10 +36,10 @@
 
             <flux:sidebar.nav>
                 <flux:sidebar.group :heading="__('Investments')" class="grid">
-                    <flux:sidebar.item icon="bolt" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
+                    <flux:sidebar.item icon="bolt" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('assets.index')" wire:navigate>
                         Crypto
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="presentation-chart-line" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
+                    <flux:sidebar.item icon="presentation-chart-line" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('watchlists.index')" wire:navigate>
                         Watchlist
                     </flux:sidebar.item>
                 </flux:sidebar.group>

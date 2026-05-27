@@ -12,10 +12,12 @@ class Accounts extends Model
 
     protected $fillable = [
         'user_id',
-        'name',
         'type',
+        'provider',
         'balance',
         'currency',
+        'is_active',
+        'icon'
     ];
 
     public function users()

@@ -23,6 +23,6 @@ class Categories extends Model
 
     public function budgets()
     {
-        return $this->hasMany(Budget::class);
+        return $this->hasMany(Budgets::class);
     }
 }
