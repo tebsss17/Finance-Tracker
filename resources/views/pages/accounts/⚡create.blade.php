@@ -17,7 +17,10 @@ new class extends Component
             : [];
     }
 
-
+    public function updatedType()
+    {
+        $this->provider = '';
+    }
 
     public function save()
     {
@@ -73,8 +76,9 @@ new class extends Component
             {{-- PROVIDER --}}
             <flux:select
                 label="Provider"
-                wire:model="provider"
+                wire:model.live="provider"
                 placeholder="Select provider"
+                :disabled="empty($type)"
             >
                 @foreach ($this->providers as $key => $provider)
                     <flux:select.option value="{{ $key }}">

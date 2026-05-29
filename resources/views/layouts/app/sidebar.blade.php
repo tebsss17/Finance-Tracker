@@ -6,13 +6,13 @@
     <body class="min-h-screen bg-white dark:bg-zinc-800">
         <flux:sidebar sticky collapsible="mobile" class="border-e border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
             <flux:sidebar.header>
-                <x-app-logo :sidebar="true" href="{{ route('dashboard') }}" wire:navigate />
+                <x-app-logo :sidebar="true" href="{{ route('dashboard') }}"  />
                 <flux:sidebar.collapse class="lg:hidden" />
             </flux:sidebar.header>
 
             <flux:sidebar.nav>
                 <flux:sidebar.group :heading="__('Platform')" class="grid">
-                    <flux:sidebar.item icon="squares-2x2" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
+                    <flux:sidebar.item icon="squares-2x2" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate >
                         {{ __('Dashboard') }}
                     </flux:sidebar.item>
                 </flux:sidebar.group>
@@ -24,13 +24,14 @@
                     <flux:sidebar.item icon="wallet" class="mb-2" :href="route('accounts.index')" :current="request()->routeIs('accounts.index')" wire:navigate>
                         Accounts
                     </flux:sidebar.item>
-                    <flux:sidebar.item icon="arrow-path" class="mb-2" :href="route('accounts.index')" :current="request()->routeIs('transanctions.index')" wire:navigate>
+                    <flux:sidebar.item icon="arrow-path" class="mb-2" :href="route('transactions.index')" :current="request()->routeIs('transactions.index')" wire:navigate >
                         Transactions
                     </flux:sidebar.item>
                     <flux:sidebar.item icon="banknotes" class="mb-2" :href="route('dashboard')" :current="request()->routeIs('budgets.index')" wire:navigate>
                         Budgets
                     </flux:sidebar.item>
                 </flux:sidebar.group>
+
             </flux:sidebar.nav>
 
 
@@ -82,7 +83,7 @@
                     <flux:menu.separator />
 
                     <flux:menu.radio.group>
-                        <flux:menu.item :href="route('profile.edit')" icon="cog" wire:navigate>
+                        <flux:menu.item :href="route('profile.edit')" icon="cog" wire:navigate >
                             {{ __('Settings') }}
                         </flux:menu.item>
                     </flux:menu.radio.group>

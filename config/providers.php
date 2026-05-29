@@ -60,7 +60,7 @@
                 'name' => 'Maya',
                 'icon' => '/images/maya.jpg'
             ],
-            'payal' => [
+            'paypal' => [
                 'name' => 'Paypal',
                 'icon' => '/images/paypal.jpg'
             ],
