@@ -82,7 +82,7 @@ new class extends Component
     {{-- Empty State --}}
     @if ($this->accounts->isEmpty())
 
-        <flux:card class="p-8 flex flex-col items-center justify-center gap-4 dark:bg-blue-400">
+        <flux:card class="p-8 flex flex-col items-center justify-center gap-4">
 
             <flux:text class="text-zinc-500 italic">
                 You have no accounts yet.
@@ -118,7 +118,7 @@ new class extends Component
                         </flux:text>
 
                         <flux:text>
-                            {{ strtoupper($account->currency) }}
+                            {{ $account->balance . ' ' . strtoupper($account->currency) }}
                         </flux:text>
 
                     </div>
